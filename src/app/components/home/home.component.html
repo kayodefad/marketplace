@@ -1,0 +1,127 @@
+<div class="header">
+  <div class="search">
+    <input type="text" placeholder="Search..." />
+    <div class="search-icon"><mat-icon>search</mat-icon></div>
+  </div>
+  <div class="right-icons">
+    <div class="icon-container">
+      <mat-icon>shopping_bag</mat-icon>
+      <div class="notif-number">1</div>
+    </div>
+    <div class="icon-container">
+      <mat-icon>chat</mat-icon>
+      <div class="notif-number">9+</div>
+    </div>
+  </div>
+</div>
+<!-- Carousel -->
+<carousel
+  [interval]="3000"
+  [isAnimated]="true"
+  [showIndicators]="false"
+  [noPause]="true"
+>
+  <slide>
+    <div class="slider-content pink">
+      <div class="slider-content-left">
+        <div class="hashtag">#BEAUTYSALE</div>
+        <div class="pitch-1">
+          DISCOVER OUT <br />
+          BEAUTY SELECTION
+        </div>
+        <button class="slider-btn">Check this out</button>
+      </div>
+      <img
+        class="slider-img"
+        src="assets/images/beauty_products.png"
+        alt="beauty products"
+      />
+    </div>
+  </slide>
+  <slide>
+    <div class="slider-content gray">
+      <div class="slider-content-left">
+        <div class="hashtag">#FASHION DAY</div>
+        <div class="promo">80% OFF</div>
+        <div class="pitch-2">
+          Discover fashion that suits to <br />
+          your style
+        </div>
+        <button class="slider-btn">Check this out</button>
+      </div>
+      <img
+        class="slider-img"
+        src="assets/images/clothes_hanged.png"
+        alt="clothes hanged"
+      />
+    </div>
+  </slide>
+</carousel>
+
+<!-- Categories -->
+<section id="categories">
+  <div class="top">
+    <div class="category-wrapper">
+      <div class="category-icon-wrapper">
+        <mat-icon>category</mat-icon>
+      </div>
+      <p class="title">Category</p>
+    </div>
+    <div class="category-wrapper">
+      <div class="category-icon-wrapper">
+        <mat-icon>flight</mat-icon>
+      </div>
+      <p class="title">Flight</p>
+    </div>
+    <div class="category-wrapper">
+      <div class="category-icon-wrapper">
+        <mat-icon>receipt_long</mat-icon>
+      </div>
+      <p class="title">Bill</p>
+    </div>
+    <div class="category-wrapper">
+      <div class="category-icon-wrapper">
+        <mat-icon>language</mat-icon>
+      </div>
+      <p class="title">Data plan</p>
+    </div>
+    <div class="category-wrapper">
+      <div class="category-icon-wrapper">
+        <mat-icon
+          ><span class="material-symbols-outlined">
+            monetization_on
+          </span></mat-icon
+        >
+      </div>
+      <p class="title">Top Up</p>
+    </div>
+  </div>
+  <div class="bottom">
+    <mat-icon>more_horiz</mat-icon>
+  </div>
+</section>
+
+<!-- Products -->
+<app-products
+  [title]="'Best Sale Product'"
+  [background]="'#e9eaed'"
+></app-products>
+
+<section class="footer">
+  <div class="footer-item">
+    <mat-icon class="home-icon">home</mat-icon>
+    <span class="text home-text">Home</span>
+  </div>
+  <div class="footer-item">
+    <mat-icon>credit_card</mat-icon>
+    <span class="text">Voucher</span>
+  </div>
+  <div class="footer-item">
+    <mat-icon>wallet</mat-icon>
+    <span class="text">Wallet</span>
+  </div>
+  <div class="footer-item">
+    <mat-icon>settings</mat-icon>
+    <span class="text">Settings</span>
+  </div>
+</section>

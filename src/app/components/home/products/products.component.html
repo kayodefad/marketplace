@@ -1,0 +1,33 @@
+<section [ngStyle]="{ background: background }" id="products">
+  <div class="title">
+    <div>{{ title }}</div>
+    <div class="see-more">See more</div>
+  </div>
+  <div class="items">
+    <div *ngFor="let item of items" class="item">
+      <div class="top">
+        <img
+          routerLink="/buy"
+          src="assets/images/shirts/{{ item.img }}.png"
+          alt="shirt_1"
+        />
+        <div class="heart-icon">
+          <fa-icon [icon]="faHeart"></fa-icon>
+        </div>
+      </div>
+      <div class="content" routerLink="/buy">
+        <div class="middle">
+          <div class="category">{{ item.category }}</div>
+          <div class="desc">{{ item.desc }}</div>
+        </div>
+        <div class="bottom">
+          <div class="left">
+            <mat-icon>star</mat-icon>
+            <span>4.9 | 2356</span>
+          </div>
+          <div class="right">${{ item.price }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

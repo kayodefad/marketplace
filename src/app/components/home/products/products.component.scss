@@ -1,0 +1,114 @@
+$green: #4ab197;
+$gray: #999ca0;
+$light-gray: #c3c6c5;
+$yellow: #dd913c;
+
+mat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#products {
+  // background: #e9eaed;
+  padding: 2rem 1.2rem;
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.5px;
+
+    h2 {
+      color: #313244;
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+
+    .see-more {
+      color: #6eb7a5;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+  }
+
+  .items {
+    margin-top: 1.3rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+
+    .item {
+      
+      .top {
+        position: relative;
+        height: 110px;
+        overflow: hidden;
+        background-color: #f0f0f0;
+
+        img {
+          position: absolute;
+          cursor: pointer;
+          width: 100%;
+          clip: rect(0, 200px, 200px, 0);
+        }
+        .heart-icon {
+          position: absolute;
+          right: 7px;
+          top: 2px;
+        }
+      }
+
+      .content {
+        cursor: pointer;
+        padding: 0.8rem 0.6rem;
+        font-size: 11px;
+        transition: background 0.2s ease-in;
+
+        &:hover {
+          background: #fff;
+        }
+
+        .middle {
+          margin-bottom: 14px;
+          .category {
+            color: $gray;
+          }
+
+          .desc {
+            font-weight: bold;
+          }
+        }
+
+        .bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .left {
+            display: flex;
+            align-items: center;
+
+            mat-icon {
+              font-size: 16px;
+              transform: translateX(-4px);
+            }
+
+            span {
+              color: $gray;
+              font-size: 9px;
+              transform: translateX(-4px);
+            }
+          }
+
+          .right {
+            color: $green;
+            font-size: 16px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
