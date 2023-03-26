@@ -1,4 +1,4 @@
-<div [@fadeInOut] class="page">
+<div class="page">
   <div class="header">
     <div class="back" routerLink="/">
       <mat-icon class="chevron-left">chevron_left</mat-icon>
@@ -18,353 +18,357 @@
   </div>
 
   <!-- Tab Gallery -->
-  <section class="container">
-    <div class="tab-gallery">
-      <ul class="thumbnail">
-        <li
-          *ngFor="let tab of tabs; let i = index"
-          [ngClass]="{ active: activeTab === i }"
-          (click)="setActiveTab(i)"
-        >
-          <img src="{{ tab.image }}" alt="" />
+  <div [@fadeInOut]>
+    <section class="container">
+      <div class="tab-gallery">
+        <ul class="thumbnail">
+          <li
+            *ngFor="let tab of tabs; let i = index"
+            [ngClass]="{ active: activeTab === i }"
+            (click)="setActiveTab(i)"
+          >
+            <img src="{{ tab.image }}" alt="" />
+          </li>
+        </ul>
+        <div class="tab-content">
+          <img src="{{ tabs[activeTab].image }}" alt="" />
+        </div>
+      </div>
+
+      <div class="seller">
+        <div class="seller-icon">
+          <mat-icon>table_chart</mat-icon>
+        </div>
+        <div class="seller-name">tokobaju.id</div>
+      </div>
+      <div class="item-title">
+        Essentials Men's Short-Sleeve <br />
+        Crewneck T-Shirt
+      </div>
+      <div class="ratings">
+        <div class="rating">
+          <mat-icon>star</mat-icon>
+          <span>4.9 Ratings</span>
+        </div>
+        <div class="dot"></div>
+        <div class="reviews">2.3k Reviews</div>
+        <div class="dot"></div>
+        <div class="reviews">2.9k + Sold</div>
+      </div>
+    </section>
+
+    <!-- About Item -->
+    <section class="container about">
+      <div class="categories">
+        <div class="left">About Item</div>
+        <div class="right">Reviews</div>
+      </div>
+      <div class="content">
+        <div class="item">
+          <div>Brand:</div>
+          <div>ChAmkpR</div>
+        </div>
+        <div class="item">
+          <div>Color:</div>
+          <div>Aprikot</div>
+        </div>
+        <div class="item">
+          <div>Category:</div>
+          <div>Casual Shirt</div>
+        </div>
+        <div class="item">
+          <div>Material:</div>
+          <div>Polyester</div>
+        </div>
+        <div class="item">
+          <div>Condition:</div>
+          <div>New</div>
+        </div>
+        <div class="item">
+          <div>Heavy:</div>
+          <div>200g</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Description -->
+    <section class="description container">
+      <div class="title">Description:</div>
+      <ul>
+        <li>
+          Long-sleeve dress shirt in classic fit featuring button-down collar
+        </li>
+        <li>Patch Pocket on Left Chest</li>
+        <li>Durable Combination Cotton Fabric</li>
+        <li>Comfortable and quality dress shirt</li>
+        <li>Go To Classic button down shirt for all special occasions</li>
+      </ul>
+    </section>
+
+    <div class="chat-us container">
+      Chat us if there is anything you need to ask about the product :)
+    </div>
+
+    <div class="container">
+      <button class="see-less">
+        See less <mat-icon>expand_less</mat-icon>
+      </button>
+    </div>
+
+    <div class="container">
+      <hr />
+    </div>
+
+    <section class="shipping-info container">
+      <div class="title">Shippings Information:</div>
+      <ul class="mt-3">
+        <li>
+          <span>Delivery:</span
+          ><span class="fw-bold">Shipping from Jakarta, Indonesia</span>
+        </li>
+        <li>
+          <span>Shipping:</span
+          ><span class="fw-bold">FREE International Shipping</span>
+        </li>
+        <li>
+          <span>Arrive:</span
+          ><span class="fw-bold">Estimated arrival on 25 - 27 Oct 2022</span>
         </li>
       </ul>
-      <div class="tab-content">
-        <img src="{{ tabs[activeTab].image }}" alt="" />
-      </div>
+    </section>
+
+    <div class="container">
+      <hr />
     </div>
 
-    <div class="seller">
-      <div class="seller-icon">
-        <mat-icon>table_chart</mat-icon>
+    <!-- Seller Info -->
+    <section class="container seller-info">
+      <div class="title">Seller Information:</div>
+      <div class="content">
+        <div class="left">
+          <span class="text">Thrifting <br />Store.</span>
+        </div>
+        <div class="right">
+          <div class="store-name">Thrifting_Store</div>
+          <div class="status">
+            <span>Active 5 Min ago</span><span class="pipe"></span
+            ><span>96.7% Positive Feedback</span>
+          </div>
+          <div class="visit-store">
+            <button><mat-icon>map</mat-icon><span>Visit store</span></button>
+          </div>
+        </div>
       </div>
-      <div class="seller-name">tokobaju.id</div>
+    </section>
+
+    <div class="container">
+      <hr />
     </div>
-    <div class="item-title">
-      Essentials Men's Short-Sleeve <br />
-      Crewneck T-Shirt
+
+    <!-- Reviews and ratings -->
+    <section class="container reviews-ratings">
+      <div class="title">Reviews & Ratings</div>
+      <div class="content">
+        <div class="left">
+          <div>
+            <span class="fw-bold big-rating">4.9 </span
+            ><span class="small-rating">/ 5.0</span>
+          </div>
+          <div class="middle">
+            <mat-icon>star</mat-icon>
+            <mat-icon>star</mat-icon>
+            <mat-icon>star</mat-icon>
+            <mat-icon>star</mat-icon>
+            <mat-icon>star</mat-icon>
+          </div>
+          <div class="bottom">2.3k+ Reviews</div>
+        </div>
+        <div class="right">
+          <div class="item">
+            <span><mat-icon>star</mat-icon></span>
+            <span class="rating-number">5</span>
+            <div class="progress-bar">
+              <div [ngStyle]="{ width: '80%' }" class="progress-inner"></div>
+            </div>
+            <span class="fw-bold number-rated">1.5k</span>
+          </div>
+          <div class="item">
+            <span><mat-icon>star</mat-icon></span>
+            <span class="rating-number">4</span>
+            <div class="progress-bar">
+              <div [ngStyle]="{ width: '40%' }" class="progress-inner"></div>
+            </div>
+            <span class="fw-bold number-rated">710</span>
+          </div>
+          <div class="item">
+            <span><mat-icon>star</mat-icon></span>
+            <span class="rating-number">3</span>
+            <div class="progress-bar">
+              <div [ngStyle]="{ width: '20%' }" class="progress-inner"></div>
+            </div>
+            <span class="fw-bold number-rated">140</span>
+          </div>
+          <div class="item">
+            <span><mat-icon>star</mat-icon></span>
+            <span class="rating-number">2</span>
+            <div class="progress-bar">
+              <div [ngStyle]="{ width: '10%' }" class="progress-inner"></div>
+            </div>
+            <span class="fw-bold number-rated">10</span>
+          </div>
+          <div class="item">
+            <span><mat-icon>star</mat-icon></span>
+            <span class="rating-number">1</span>
+            <div class="progress-bar">
+              <div [ngStyle]="{ width: '5%' }" class="progress-inner"></div>
+            </div>
+            <span class="fw-bold number-rated">4</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews with images & videos -->
+    <section class="container image-reviews">
+      <div class="title">Reviews with images & videos</div>
+      <div class="content">
+        <div class="item">
+          <img src="assets/images/shirts/shirt_1/thumb_1.png" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/shirts/shirt_1/thumb_2.png" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/shirts/shirt_1/thumb_3.png" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/shirts/shirt_1/thumb_4.png" alt="" />
+          <div class="gradient"></div>
+          <span class="text">132+</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <hr />
     </div>
-    <div class="ratings">
-      <div class="rating">
-        <mat-icon>star</mat-icon>
-        <span>4.9 Ratings</span>
-      </div>
-      <div class="dot"></div>
-      <div class="reviews">2.3k Reviews</div>
-      <div class="dot"></div>
-      <div class="reviews">2.9k + Sold</div>
-    </div>
-  </section>
 
-  <!-- About Item -->
-  <section class="container about">
-    <div class="categories">
-      <div class="left">About Item</div>
-      <div class="right">Reviews</div>
-    </div>
-    <div class="content">
-      <div class="item">
-        <div>Brand:</div>
-        <div>ChAmkpR</div>
-      </div>
-      <div class="item">
-        <div>Color:</div>
-        <div>Aprikot</div>
-      </div>
-      <div class="item">
-        <div>Category:</div>
-        <div>Casual Shirt</div>
-      </div>
-      <div class="item">
-        <div>Material:</div>
-        <div>Polyester</div>
-      </div>
-      <div class="item">
-        <div>Condition:</div>
-        <div>New</div>
-      </div>
-      <div class="item">
-        <div>Heavy:</div>
-        <div>200g</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Description -->
-  <section class="description container">
-    <div class="title">Description:</div>
-    <ul>
-      <li>
-        Long-sleeve dress shirt in classic fit featuring button-down collar
-      </li>
-      <li>Patch Pocket on Left Chest</li>
-      <li>Durable Combination Cotton Fabric</li>
-      <li>Comfortable and quality dress shirt</li>
-      <li>Go To Classic button down shirt for all special occasions</li>
-    </ul>
-  </section>
-
-  <div class="chat-us container">
-    Chat us if there is anything you need to ask about the product :)
-  </div>
-
-  <div class="container">
-    <button class="see-less">See less <mat-icon>expand_less</mat-icon></button>
-  </div>
-
-  <div class="container">
-    <hr />
-  </div>
-
-  <section class="shipping-info container">
-    <div class="title">Shippings Information:</div>
-    <ul class="mt-3">
-      <li>
-        <span>Delivery:</span
-        ><span class="fw-bold">Shipping from Jakarta, Indonesia</span>
-      </li>
-      <li>
-        <span>Shipping:</span
-        ><span class="fw-bold">FREE International Shipping</span>
-      </li>
-      <li>
-        <span>Arrive:</span
-        ><span class="fw-bold">Estimated arrival on 25 - 27 Oct 2022</span>
-      </li>
-    </ul>
-  </section>
-
-  <div class="container">
-    <hr />
-  </div>
-
-  <!-- Seller Info -->
-  <section class="container seller-info">
-    <div class="title">Seller Information:</div>
-    <div class="content">
+    <!-- Top Reviews -->
+    <section class="container top-reviews">
       <div class="left">
-        <span class="text">Thrifting <br />Store.</span>
+        <div class="title">Top Reviews</div>
+        <div class="sub-title">Showing 3 of 2.3k+ reviews</div>
       </div>
       <div class="right">
-        <div class="store-name">Thrifting_Store</div>
-        <div class="status">
-          <span>Active 5 Min ago</span><span class="pipe"></span
-          ><span>96.7% Positive Feedback</span>
+        <select id="reviews">
+          <option value="volvo">Popular</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="container single-review">
+      <div>
+        <div class="top">
+          <div class="left">
+            <img src="https://i.pravatar.cc/300" alt="avatar" />
+            <span>Eren Yarmer</span>
+          </div>
+          <div class="right">
+            <div><mat-icon class="star">star</mat-icon></div>
+            <span>5.0</span>
+            <div><mat-icon class="more">more_horiz</mat-icon></div>
+          </div>
         </div>
-        <div class="visit-store">
-          <button><mat-icon>map</mat-icon><span>Visit store</span></button>
+        <div class="review-tabs">
+          <div class="tab">Product in good condition</div>
+          <div class="tab">Very fast delivery</div>
+          <div class="tab">Fast seller response</div>
+        </div>
+        <div class="review-text">
+          According to my expectations. This is the best. Thank you
+        </div>
+        <div class="bottom">
+          <div class="left">
+            <mat-icon>thumb_up</mat-icon>
+            <span>Helpful?</span>
+          </div>
+          <div class="right">Yesterdays</div>
+        </div>
+        <div class="my-4">
+          <hr />
         </div>
       </div>
-    </div>
-  </section>
+      <div>
+        <div class="top">
+          <div class="left">
+            <img src="https://i.pravatar.cc/300" alt="avatar" />
+            <span>Annie Idibia</span>
+          </div>
+          <div class="right">
+            <div><mat-icon class="star">star</mat-icon></div>
+            <span>5.0</span>
+            <div><mat-icon class="more">more_horiz</mat-icon></div>
+          </div>
+        </div>
+        <div class="review-tabs">
+          <div class="tab">Product in good condition</div>
+          <div class="tab">Very fast delivery</div>
+          <div class="tab">Fast seller response</div>
+        </div>
+        <div class="review-text">
+          According to my expectations. This is the best. Thank you
+        </div>
+        <div class="bottom">
+          <div class="left">
+            <mat-icon>thumb_up</mat-icon>
+            <span>Helpful?</span>
+          </div>
+          <div class="right">Yesterdays</div>
+        </div>
+        <div class="my-4">
+          <hr />
+        </div>
+      </div>
+      <div>
+        <div class="top">
+          <div class="left">
+            <img src="https://i.pravatar.cc/300" alt="avatar" />
+            <span>Kevi Ashman</span>
+          </div>
+          <div class="right">
+            <div><mat-icon class="star">star</mat-icon></div>
+            <span>5.0</span>
+            <div><mat-icon class="more">more_horiz</mat-icon></div>
+          </div>
+        </div>
+        <div class="review-tabs">
+          <div class="tab">Product in good condition</div>
+          <div class="tab">Very fast delivery</div>
+          <div class="tab">Fast seller response</div>
+        </div>
+        <div class="review-text">
+          According to my expectations. This is the best. Thank you
+        </div>
+        <div class="bottom">
+          <div class="left">
+            <mat-icon>thumb_up</mat-icon>
+            <span>Helpful?</span>
+          </div>
+          <div class="right">Yesterdays</div>
+        </div>
+        <div class="my-4">
+          <hr />
+        </div>
+      </div>
+    </section>
 
-  <div class="container">
-    <hr />
+    <!-- Recommendation -->
+    <app-products
+      [title]="'Recommendation'"
+      [background]="'transparent'"
+      [headingPosition]="'relative'"
+    ></app-products>
   </div>
-
-  <!-- Reviews and ratings -->
-  <section class="container reviews-ratings">
-    <div class="title">Reviews & Ratings</div>
-    <div class="content">
-      <div class="left">
-        <div>
-          <span class="fw-bold big-rating">4.9 </span
-          ><span class="small-rating">/ 5.0</span>
-        </div>
-        <div class="middle">
-          <mat-icon>star</mat-icon>
-          <mat-icon>star</mat-icon>
-          <mat-icon>star</mat-icon>
-          <mat-icon>star</mat-icon>
-          <mat-icon>star</mat-icon>
-        </div>
-        <div class="bottom">2.3k+ Reviews</div>
-      </div>
-      <div class="right">
-        <div class="item">
-          <span><mat-icon>star</mat-icon></span>
-          <span class="rating-number">5</span>
-          <div class="progress-bar">
-            <div [ngStyle]="{ width: '80%' }" class="progress-inner"></div>
-          </div>
-          <span class="fw-bold number-rated">1.5k</span>
-        </div>
-        <div class="item">
-          <span><mat-icon>star</mat-icon></span>
-          <span class="rating-number">4</span>
-          <div class="progress-bar">
-            <div [ngStyle]="{ width: '40%' }" class="progress-inner"></div>
-          </div>
-          <span class="fw-bold number-rated">710</span>
-        </div>
-        <div class="item">
-          <span><mat-icon>star</mat-icon></span>
-          <span class="rating-number">3</span>
-          <div class="progress-bar">
-            <div [ngStyle]="{ width: '20%' }" class="progress-inner"></div>
-          </div>
-          <span class="fw-bold number-rated">140</span>
-        </div>
-        <div class="item">
-          <span><mat-icon>star</mat-icon></span>
-          <span class="rating-number">2</span>
-          <div class="progress-bar">
-            <div [ngStyle]="{ width: '10%' }" class="progress-inner"></div>
-          </div>
-          <span class="fw-bold number-rated">10</span>
-        </div>
-        <div class="item">
-          <span><mat-icon>star</mat-icon></span>
-          <span class="rating-number">1</span>
-          <div class="progress-bar">
-            <div [ngStyle]="{ width: '5%' }" class="progress-inner"></div>
-          </div>
-          <span class="fw-bold number-rated">4</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Reviews with images & videos -->
-  <section class="container image-reviews">
-    <div class="title">Reviews with images & videos</div>
-    <div class="content">
-      <div class="item">
-        <img src="assets/images/shirts/shirt_1/thumb_1.png" alt="" />
-      </div>
-      <div class="item">
-        <img src="assets/images/shirts/shirt_1/thumb_2.png" alt="" />
-      </div>
-      <div class="item">
-        <img src="assets/images/shirts/shirt_1/thumb_3.png" alt="" />
-      </div>
-      <div class="item">
-        <img src="assets/images/shirts/shirt_1/thumb_4.png" alt="" />
-        <div class="gradient"></div>
-        <span class="text">132+</span>
-      </div>
-    </div>
-  </section>
-
-  <div class="container">
-    <hr />
-  </div>
-
-  <!-- Top Reviews -->
-  <section class="container top-reviews">
-    <div class="left">
-      <div class="title">Top Reviews</div>
-      <div class="sub-title">Showing 3 of 2.3k+ reviews</div>
-    </div>
-    <div class="right">
-      <select id="reviews">
-        <option value="volvo">Popular</option>
-      </select>
-    </div>
-  </section>
-
-  <section class="container single-review">
-    <div>
-      <div class="top">
-        <div class="left">
-          <img src="https://i.pravatar.cc/300" alt="avatar" />
-          <span>Eren Yarmer</span>
-        </div>
-        <div class="right">
-          <div><mat-icon class="star">star</mat-icon></div>
-          <span>5.0</span>
-          <div><mat-icon class="more">more_horiz</mat-icon></div>
-        </div>
-      </div>
-      <div class="review-tabs">
-        <div class="tab">Product in good condition</div>
-        <div class="tab">Very fast delivery</div>
-        <div class="tab">Fast seller response</div>
-      </div>
-      <div class="review-text">
-        According to my expectations. This is the best. Thank you
-      </div>
-      <div class="bottom">
-        <div class="left">
-          <mat-icon>thumb_up</mat-icon>
-          <span>Helpful?</span>
-        </div>
-        <div class="right">Yesterdays</div>
-      </div>
-      <div class="my-4">
-        <hr />
-      </div>
-    </div>
-    <div>
-      <div class="top">
-        <div class="left">
-          <img src="https://i.pravatar.cc/300" alt="avatar" />
-          <span>Annie Idibia</span>
-        </div>
-        <div class="right">
-          <div><mat-icon class="star">star</mat-icon></div>
-          <span>5.0</span>
-          <div><mat-icon class="more">more_horiz</mat-icon></div>
-        </div>
-      </div>
-      <div class="review-tabs">
-        <div class="tab">Product in good condition</div>
-        <div class="tab">Very fast delivery</div>
-        <div class="tab">Fast seller response</div>
-      </div>
-      <div class="review-text">
-        According to my expectations. This is the best. Thank you
-      </div>
-      <div class="bottom">
-        <div class="left">
-          <mat-icon>thumb_up</mat-icon>
-          <span>Helpful?</span>
-        </div>
-        <div class="right">Yesterdays</div>
-      </div>
-      <div class="my-4">
-        <hr />
-      </div>
-    </div>
-    <div>
-      <div class="top">
-        <div class="left">
-          <img src="https://i.pravatar.cc/300" alt="avatar" />
-          <span>Kevi Ashman</span>
-        </div>
-        <div class="right">
-          <div><mat-icon class="star">star</mat-icon></div>
-          <span>5.0</span>
-          <div><mat-icon class="more">more_horiz</mat-icon></div>
-        </div>
-      </div>
-      <div class="review-tabs">
-        <div class="tab">Product in good condition</div>
-        <div class="tab">Very fast delivery</div>
-        <div class="tab">Fast seller response</div>
-      </div>
-      <div class="review-text">
-        According to my expectations. This is the best. Thank you
-      </div>
-      <div class="bottom">
-        <div class="left">
-          <mat-icon>thumb_up</mat-icon>
-          <span>Helpful?</span>
-        </div>
-        <div class="right">Yesterdays</div>
-      </div>
-      <div class="my-4">
-        <hr />
-      </div>
-    </div>
-  </section>
-
-  <!-- Recommendation -->
-  <app-products
-    [title]="'Recommendation'"
-    [background]="'transparent'"
-    [headingPosition]="'relative'"
-  ></app-products>
 
   <section class="footer">
     <div class="left">

@@ -10,8 +10,8 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
   animations: [
     trigger('fadeInOut', [
       transition(':enter', [
-        style({ opacity: 0 }),
-        animate('0.8s', style({ opacity: 1 })),
+        style({ opacity: 0, transform: 'translateY(30px)' }),
+        animate('0.3s', style({ opacity: 1, transform: 'translateY(0)' })),
       ]),
       transition(':leave', [animate('0.5s', style({ opacity: 0 }))]),
     ]),
