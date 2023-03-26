@@ -90,6 +90,10 @@ $header-height: 80px;
       font-size: 13px;
       border: 1px solid #d6d9dc;
       border-radius: 4px;
+
+      &:focus {
+        outline: none;
+      }
     }
 
     .search-icon {
