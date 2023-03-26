@@ -9,6 +9,7 @@ import { faHeart } from '@fortawesome/free-regular-svg-icons';
 export class ProductsComponent {
   @Input() title!: string;
   @Input() background!: string;
+  @Input() headingPosition!: string;
   faHeart = faHeart;
 
   items = [

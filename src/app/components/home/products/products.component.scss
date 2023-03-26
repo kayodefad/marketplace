@@ -2,6 +2,7 @@ $green: #4ab197;
 $gray: #999ca0;
 $light-gray: #c3c6c5;
 $yellow: #dd913c;
+$header-height: 80px;
 
 mat-icon {
   display: flex;
@@ -11,15 +12,18 @@ mat-icon {
 
 #products {
   // background: #e9eaed;
-  padding: 2rem 1.2rem;
 
   .title {
+    padding: 1.3rem 1.2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-weight: 700;
     font-size: 1.25rem;
     letter-spacing: -0.5px;
+    // position: sticky;
+    // top: calc($header-height);
+    z-index: 500;
 
     h2 {
       color: #313244;
@@ -35,13 +39,11 @@ mat-icon {
   }
 
   .items {
-    margin-top: 1.3rem;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
 
     .item {
-      
       .top {
         position: relative;
         height: 110px;
@@ -93,6 +95,7 @@ mat-icon {
             mat-icon {
               font-size: 16px;
               transform: translateX(-4px);
+              color: $yellow;
             }
 
             span {

@@ -1,5 +1,6 @@
 $gray: #999ca0;
 $green: #4ab197;
+$header-height: 80px;
 
 .slider-content {
   height: 200px;
@@ -66,10 +67,11 @@ $green: #4ab197;
 }
 
 .header {
+  height: $header-height;
+  padding: 0 1.2rem;
   position: sticky;
   top: 0;
   left: 0;
-  padding: 1.2rem 1.2rem;
   background: #fff;
   display: flex;
   align-items: center;
